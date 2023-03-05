@@ -1,0 +1,19 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flexJcsb($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin container() {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+}

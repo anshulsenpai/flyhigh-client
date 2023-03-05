@@ -1,0 +1,53 @@
+@import "../../utils/variables.scss";
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $tertiaryBgColor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  background-color: $hoverBgColor;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: $textPrimary;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+
+.login--btn {
+  min-width: 100%;
+}
+
+.btn--primary {
+  background-color: $dark;
+  color: $light;
+  border-radius: 0.6rem;
+}

@@ -1,0 +1,85 @@
+.login--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3E54AC;
+  overflow: hidden;
+  z-index: 10000;
+}
+.login--container .login--form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+  width: 42.5rem;
+  max-height: 80%;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.login--container .login--form .form--top {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+.login--container .login--form .form--top .form--title {
+  color: #3E54AC;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.login--container .login--form .form--login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 3;
+  width: 100%;
+  height: 100%;
+}
+.login--container .login--form .form--login .form--actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+.login--container .login--form .form--login .form--actions .input--field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1rem;
+  width: 100%;
+}
+.login--container .login--form .form--login .other--form--options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0;
+}
+.login--container .login--form .form--login .other--form--options .option--1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  gap: 0.5rem;
+  flex: 2;
+}
+.login--container .login--form .form--login .other--form--options a, .login--container .login--form .form--login .other--form--options p {
+  font-size: 1.4rem;
+}/*# sourceMappingURL=login.css.map */

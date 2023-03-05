@@ -1,0 +1,49 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #EEEEEE;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  background-color: #3E54AC;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #202020;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+.login--btn {
+  min-width: 100%;
+}
+
+.btn--primary {
+  background-color: #000;
+  color: #FFF;
+  border-radius: 0.6rem;
+}/*# sourceMappingURL=main.css.map */

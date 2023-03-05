@@ -1,0 +1,111 @@
+.sidebar--wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.sidebar--wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.top--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+}
+.top--container h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  width: 100%;
+}
+.top--container .close--slider--btn {
+  width: 4rem;
+  height: 3.6rem;
+  border: 1px solid #bababa;
+  background-color: #22212e;
+  border-radius: 0.6rem;
+  z-index: 998;
+  display: none;
+}
+@media screen and (max-width: 42.5rem) {
+  .top--container .close--slider--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.profile--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #3E54AC;
+  width: 100%;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.8rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 1.5rem 0;
+}
+.profile--container .user--details h2 {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+}
+.profile--container .user--details p {
+  color: #bababa;
+  font-size: 1rem;
+}
+.profile--container:hover {
+  transform: scale(101%);
+}
+
+.nav--links {
+  width: 100%;
+}
+.nav--links .nav--link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 0.6rem;
+}
+.nav--links .nav--link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1.5rem 1.5rem;
+  gap: 1rem;
+  color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.6rem;
+}
+.nav--links .nav--link a p {
+  font-size: 1.2rem;
+  width: 100%;
+}
+.nav--links .nav--link a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar--toggler {
+  display: none !important;
+}
+@media screen and (max-width: 42.5rem) {
+  .sidebar--toggler {
+    display: flex !important;
+  }
+}/*# sourceMappingURL=sidebar.css.map */
