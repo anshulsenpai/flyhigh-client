@@ -14,12 +14,13 @@ import Vote from "./pages/Vote";
 import "./styles/components/app/app.css";
 
 const App2 = () => {
-  const user = true;
+  // const user = false;
   const isActive = useSelector((state: any) => state.slider.isActive);
+  const user = useSelector((state: any) => state.user.currentUser);
 
   return (
     <div className="App">
-      <div
+      <div style={user? {display: "block"} : {display: "none"}}
         className={isActive ? "slider--active sidebar--container" : "sidebar--container"}>
         <Sidebar />
       </div>

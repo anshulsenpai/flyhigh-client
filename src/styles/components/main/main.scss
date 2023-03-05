@@ -30,7 +30,6 @@ a {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-
 .input {
   padding: 1rem;
   font-size: 1.2rem;
@@ -41,9 +40,13 @@ a {
   border-radius: 0.6rem;
 }
 
-
 .login--btn {
   min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn--primary {
@@ -51,3 +54,22 @@ a {
   color: $light;
   border-radius: 0.6rem;
 }
+
+.loading--spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid $light;
+  border-bottom: 2px solid $dark;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

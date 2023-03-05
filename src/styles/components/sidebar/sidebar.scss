@@ -7,25 +7,21 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: none;
   }
-
 }
 
 .top--container {
   @include flexJcsb(row);
   width: 100%;
   padding: 1rem;
-  // margin: 1rem 0;
   cursor: pointer;
 
   h1 {
     font-family: "Fira Sans", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $textSecondary;
     width: 100%;
   }
@@ -50,21 +46,23 @@
   background-color: $hoverBgColor;
   width: 100%;
   gap: 1.5rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.8rem;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  margin: 1.5rem 0;
-
+  margin-top: 1rem;
   .user--details {
+    flex: 3;
     h2 {
       font-size: 1.6rem;
       color: $textSecondary;
+      text-transform: capitalize;
     }
 
     p {
       color: $textTertiary;
       font-size: 1rem;
+      text-transform: capitalize;
     }
   }
 
@@ -75,19 +73,18 @@
 
 .nav--links {
   width: 100%;
-  // margin-top: 1rem;
 
   .nav--link {
     @include flexJcsb(row);
     width: 100%;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     border-radius: 0.6rem;
 
     a {
       @include flexCenter(row);
       width: 100%;
       font-size: 1.4rem;
-      padding: 1.5rem 1.5rem;
+      padding: 1.2rem 1.5rem;
       gap: 1rem;
       color: $textSecondary;
       transition: all 0.3s ease-in-out;

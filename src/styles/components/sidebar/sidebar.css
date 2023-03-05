@@ -20,7 +20,7 @@
 }
 .top--container h1 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #FFFFFF;
   width: 100%;
 }
@@ -50,19 +50,24 @@
   background-color: #3E54AC;
   width: 100%;
   gap: 1.5rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.8rem;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  margin: 1.5rem 0;
+  margin-top: 1rem;
+}
+.profile--container .user--details {
+  flex: 3;
 }
 .profile--container .user--details h2 {
   font-size: 1.6rem;
   color: #FFFFFF;
+  text-transform: capitalize;
 }
 .profile--container .user--details p {
   color: #bababa;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 .profile--container:hover {
   transform: scale(101%);
@@ -77,7 +82,7 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 1.2rem 0;
   border-radius: 0.6rem;
 }
 .nav--links .nav--link a {
@@ -87,7 +92,7 @@
   flex-direction: row;
   width: 100%;
   font-size: 1.4rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   gap: 1rem;
   color: #FFFFFF;
   transition: all 0.3s ease-in-out;

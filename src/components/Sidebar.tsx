@@ -9,12 +9,12 @@ import Groups3Icon from "@mui/icons-material/Groups3";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
 import PollIcon from "@mui/icons-material/Poll";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeSlider } from "../redux/sliderSlice";
+import { logOut } from "../redux/userSlice";
 
 const Sidebar = () => {
-  console.log("Sidebar");
-
+  const user = useSelector((state: any) => state.user.currentUser);
   const navigate = useNavigate();
   // Navigate to profile
   const handleProfile = () => {
@@ -30,23 +30,40 @@ const Sidebar = () => {
   const handleSlider = () => {
     dispatch(closeSlider());
   };
+
+  const handleLogout = () => {
+    dispatch(logOut());
+    navigate("/");
+  };
+
   return (
     <div className="sidebar--wrapper" onClick={handleSlider}>
       <div className="top--container">
         <h1 onClick={handleHome}>FLYHIGH</h1>
-        <div className="sidebar--toggler" style={{border: "1px solid #bababa", display: "flex", padding: "0.8rem",width: "fit-content", height: "fit-content", borderRadius: "50%"}} onClick={handleSlider}>
-          <ArrowBackIosNewIcon style={{color: "#FFF", fontSize: "2rem"}} />
+        <div
+          className="sidebar--toggler"
+          style={{
+            border: "1px solid #bababa",
+            display: "flex",
+            padding: "0.8rem",
+            width: "fit-content",
+            height: "fit-content",
+            borderRadius: "50%",
+          }}
+          onClick={handleSlider}
+        >
+          <ArrowBackIosNewIcon style={{ color: "#FFF", fontSize: "2rem" }} />
         </div>
       </div>
-      <div className="profile--container">
+      <div className="profile--container" onClick={handleProfile}>
         <Avatar
           alt="Anshul Kulkarni"
           src="/static/images/avatar/1.jpg"
           sx={{ width: "7rem", height: "7rem", bgcolor: "EEEEEE" }}
         />
         <div className="user--details">
-          <h2>Anshul Kulkarni</h2>
-          <p>Member</p>
+          <h2>{user?._doc.name}</h2>
+          <p>{user?._doc.userType}</p>
         </div>
         <ArrowForwardIosIcon className="mui--icon" />
       </div>
@@ -87,6 +104,9 @@ const Sidebar = () => {
             <p>Vote</p>
           </NavLink>
         </li>
+        <button onClick={handleLogout} className="logout btn">
+          Log out
+        </button>
       </ul>
     </div>
   );
