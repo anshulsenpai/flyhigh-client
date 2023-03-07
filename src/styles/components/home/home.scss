@@ -2,5 +2,137 @@
 @import "../../utils/functions.scss";
 
 .home--container {
-    @include container();
+  @include container();
+  @include flexCenter(column);
+}
+
+.home--wrapper {
+  @include flexCenter(column);
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+
+  .notifier--list {
+    @include flexCenter(column);
+    width: 100%;
+
+    .notifier--container {
+      @include flexCenter(row);
+      width: 96%;
+      height: fit-content;
+      min-height: 10rem;
+      padding: 1rem 1rem;
+      margin: 1rem 1rem;
+
+      background-color: $light;
+      border-radius: 1rem;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      .visitors--notifier {
+        flex: 4;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .notifier--actions {
+        @include flexJcsb(row);
+        gap: 1rem;
+        flex: 1;
+        width: 100%;
+        padding: 1rem;
+
+        button {
+          font-size: 1.2rem;
+          margin: 0 !important;
+          box-shadow: none !important;
+          //   padding: 1rem !important;
+        }
+      }
+
+      @media screen and (max-width: 42.5rem) {
+        min-height: 12rem;
+        height: fit-content;
+        @include flexCenter(column);
+
+        .visitors--notifier {
+          font-size: 1.2rem;
+        }
+        .notifier--actions {
+          @include flexCenter(row);
+        }
+      }
+    }
+  }
+}
+
+.section--title {
+  width: 100%;
+  padding: 1rem;
+
+  h3 {
+    font-size: 1.2rem;
+    color: $textPrimary;
+    font-weight: 500;
+  }
+}
+
+.daily--visitors {
+  @include flexCenter(row);
+  width: 96%;
+  height: 14rem !important;
+  border-radius: 1rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 42.5rem) {
+    height: 100% !important;
+    @include flexCenter(column);
+    margin-bottom: 1rem;
+  }
+}
+
+.visitor--card {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #bface2;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  .visitor--card--info {
+    flex: 2;
+    text-shadow: 5px 0 10px rgba(0, 0, 0, 0.25);
+    h2 {
+      font-size: 2.2rem;
+      color: $textSecondary;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $textPrimary;
+      font-weight: 500;
+    }
+  }
+
+  img {
+    flex: 1;
+    display: block;
+    width: 15rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media screen and (max-width: 42.5rem) {
+    min-height: 8rem !important;
+  }
+
+  &:hover {
+    transform: scale(103%);
+  }
 }

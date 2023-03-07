@@ -9,6 +9,7 @@ import Groups3Icon from "@mui/icons-material/Groups3";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import AssignmentLateIcon from "@mui/icons-material/AssignmentLate";
 import PollIcon from "@mui/icons-material/Poll";
+import PaymentIcon from "@mui/icons-material/Payment";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSlider } from "../redux/sliderSlice";
 import { logOut } from "../redux/userSlice";
@@ -29,11 +30,6 @@ const Sidebar = () => {
 
   const handleSlider = () => {
     dispatch(closeSlider());
-  };
-
-  const handleLogout = () => {
-    dispatch(logOut());
-    navigate("/");
   };
 
   return (
@@ -81,6 +77,12 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li className="nav--link">
+          <NavLink to="/payments">
+            <PaymentIcon className="mui--icon" />
+            <p>Payments</p>
+          </NavLink>
+        </li>
+        <li className="nav--link">
           <NavLink to="/meetings">
             <Groups3Icon className="mui--icon" />
             <p>Meetings</p>
@@ -104,9 +106,6 @@ const Sidebar = () => {
             <p>Vote</p>
           </NavLink>
         </li>
-        <button onClick={handleLogout} className="logout btn">
-          Log out
-        </button>
       </ul>
     </div>
   );
